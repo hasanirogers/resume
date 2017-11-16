@@ -63,6 +63,7 @@ header {
   @extend %layoutdiv;
 
   img {
+    display: none;
     width: 100px;
     margin-right: 1rem;
     border-radius: 50%;
@@ -71,10 +72,6 @@ header {
 
 .resume {
   color: $colorblack;
-
-  max-width: 1140px;
-  display: grid;
-  grid-template-columns: 1fr 5fr;
 
   padding: 2rem;
   margin: 0 auto;
@@ -85,9 +82,9 @@ header {
   }
 
   h3 {
-    font-size: 0.9rem;
-    text-align: right;
-    margin: 0 2rem 0 0;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $colorblack;
   }
 
   h3:after {
@@ -110,7 +107,8 @@ header {
 
   &__skills {
     font-size: 0.8rem;
-    column-width: 20vw;
+    column-width: 50vw;
+
     margin-bottom: 1rem;
 
     ul {
@@ -200,4 +198,33 @@ footer h2 {
   margin: 2rem;
   padding-top: 2rem;
   border-top: 1px solid $colorblack;
+}
+
+@media (min-width: 640px) {
+  header {
+    img {
+      display: block;
+    }
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    text-align: right;
+    padding: 0;
+  }
+
+  .resume {
+    max-width: 1140px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+
+    h3 {
+      margin: 0 2rem 0 0;
+      border-bottom: none;
+    }
+
+    &__skills {
+      column-width: 20vw;
+    }
+  }
 }

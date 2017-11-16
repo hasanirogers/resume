@@ -44,24 +44,22 @@ header {
   display: grid;
   grid-template-columns: auto 1fr; }
   header img {
+    display: none;
     width: 100px;
     margin-right: 1rem;
     border-radius: 50%; }
 
 .resume {
   color: #101010;
-  max-width: 1140px;
-  display: grid;
-  grid-template-columns: 1fr 5fr;
   padding: 2rem;
   margin: 0 auto; }
   .resume p {
     margin-top: 0;
     margin-bottom: 1rem; }
   .resume h3 {
-    font-size: 0.9rem;
-    text-align: right;
-    margin: 0 2rem 0 0; }
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #101010; }
   .resume h3:after {
     content: ":"; }
   .resume h4 {
@@ -75,7 +73,7 @@ header {
     line-height: 1.5; }
   .resume__skills {
     font-size: 0.8rem;
-    column-width: 20vw;
+    column-width: 50vw;
     margin-bottom: 1rem; }
     .resume__skills ul {
       margin: 0 0 1rem 0;
@@ -138,3 +136,20 @@ footer h2 {
   margin: 2rem;
   padding-top: 2rem;
   border-top: 1px solid #101010; }
+
+@media (min-width: 640px) {
+  header img {
+    display: block; }
+  h3 {
+    font-size: 0.9rem;
+    text-align: right;
+    padding: 0; }
+  .resume {
+    max-width: 1140px;
+    display: grid;
+    grid-template-columns: 1fr 5fr; }
+    .resume h3 {
+      margin: 0 2rem 0 0;
+      border-bottom: none; }
+    .resume__skills {
+      column-width: 20vw; } }
