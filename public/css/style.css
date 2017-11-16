@@ -100,10 +100,11 @@ header {
   .contact section {
     max-width: 960px;
     margin: 0 auto;
-    display: grid;
-    padding-bottom: 1rem;
-    grid-template-columns: 1fr 2fr; }
+    padding-bottom: 1rem; }
+  .contact section > :first-child {
+    margin-left: 2rem; }
   .contact paper-input {
+    width: 90%;
     text-align: left;
     --primary-text-color: #6e6c69; }
   .contact iron-icon {
@@ -115,16 +116,15 @@ header {
     line-height: 1.5;
     width: 80%;
     height: 100%;
-    max-height: 184px;
+    height: 184px;
     margin: 1rem 2rem;
     padding: 1rem;
     border: none;
     border-bottom: 1px solid #6e6c69;
     background: rgba(255, 255, 255, 0.05); }
   .contact paper-button {
-    width: 33%;
+    width: 80%;
     font-weight: bold;
-    margin: 0 auto;
     padding: 1rem 1.5rem;
     text-transform: unset;
     margin-bottom: 2rem;
@@ -152,4 +152,12 @@ footer h2 {
       margin: 0 2rem 0 0;
       border-bottom: none; }
     .resume__skills {
-      column-width: 20vw; } }
+      column-width: 20vw; }
+  .contact section {
+    display: grid;
+    grid-template-columns: 1fr 2fr; }
+  .contact paper-input {
+    width: 100%; }
+  .contact paper-button {
+    width: 40%;
+    margin: 0 auto; } }
