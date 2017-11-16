@@ -42,12 +42,12 @@ a {
 h1 {
   font-size: 3rem;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.2;
   text-shadow: 1px 1px 0px rgba(150, 150, 150, 1);
 }
 
 h2 {
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
   text-transform: lowercase;
 }
 
@@ -58,6 +58,7 @@ h3 {
 
 header {
   margin: 1rem 2rem;
+  padding-bottom: 2rem;
   display: grid;
   grid-template-columns: auto 1fr;
   @extend %layoutdiv;
@@ -195,6 +196,27 @@ header {
 
 }
 
+.social-media {
+  list-style: none;
+  display: inline-flex;
+  margin: 0 0 1rem 0;
+  padding: 0;
+
+  a {
+    color: $colorwhite;
+  }
+
+  li {
+    flex: 0 0 auto;
+  }
+
+  [icon] {
+    --iron-icon-height: 96px;
+    --iron-icon-width: 96px;
+    margin-right: 2rem;
+  }
+}
+
 footer h2 {
   max-width: 1280px;
   margin: 2rem;
@@ -243,7 +265,7 @@ footer h2 {
 
     paper-button {
       width: 40%;
-      margin: 0 auto;
+      margin: 0 auto 2rem auto;
 
     }
   }

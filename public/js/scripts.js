@@ -1,15 +1,21 @@
-document.getElementById('contact').addEventListener('submit', function(event) {
-  event.preventDefault();
+var domain = window.location.href;
+    submitBtn = document.getElementsByTagName('paper-button')[0];
 
-  var request;
+submitBtn.addEventListener('click', function(event) {
+  event.preventDefault();
+  var request,
+      form,
+      userData;
 
   function makeRequest() {
     request = new XMLHttpRequest();
-    request.onreadystatechange = handleResponse;
-    request.open('GET', '/email');
-    request.send();
-  }
+    form = document.querySelector('form');
+    userData = new FormData(form);
 
+    request.onreadystatechange = handleResponse;
+    request.open('POST', domain + 'contactme');
+    request.send(userData);
+  }
 
   function handleResponse() {
     if (request.readyState === 4) {

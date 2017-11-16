@@ -28,11 +28,11 @@ a {
 h1 {
   font-size: 3rem;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.2;
   text-shadow: 1px 1px 0px #969696; }
 
 h2 {
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
   text-transform: lowercase; }
 
 h2,
@@ -41,6 +41,7 @@ h3 {
 
 header {
   margin: 1rem 2rem;
+  padding-bottom: 2rem;
   display: grid;
   grid-template-columns: auto 1fr; }
   header img {
@@ -131,6 +132,20 @@ header {
     border-radius: 4px;
     background: #0069cc; }
 
+.social-media {
+  list-style: none;
+  display: inline-flex;
+  margin: 0 0 1rem 0;
+  padding: 0; }
+  .social-media a {
+    color: #eeeeee; }
+  .social-media li {
+    flex: 0 0 auto; }
+  .social-media [icon] {
+    --iron-icon-height: 96px;
+    --iron-icon-width: 96px;
+    margin-right: 2rem; }
+
 footer h2 {
   max-width: 1280px;
   margin: 2rem;
@@ -160,4 +175,4 @@ footer h2 {
     width: 100%; }
   .contact paper-button {
     width: 40%;
-    margin: 0 auto; } }
+    margin: 0 auto 2rem auto; } }
