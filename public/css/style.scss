@@ -1,0 +1,203 @@
+$colorwhite: rgb(238, 238, 238);
+$colorblack: #101010;
+$colorgray: #404040;
+$colorprimary: #d06f00;
+$colorsecondary: #0069cc;
+
+
+%layoutdiv {
+  max-width: 1280px;
+  border-bottom: 1px solid $colorblack;
+}
+
+
+body {
+  font: 14px 'Ubuntu', sans-serif;
+  color: $colorblack;
+  margin: 0;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-image: url('../img/tree.png');
+}
+
+html:after {
+  content: " ";
+  display: block;
+  position: fixed;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0,0,0,0.5);
+}
+
+a {
+  color: $colorsecondary;
+
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1.5;
+  text-shadow: 1px 1px 0px rgba(150, 150, 150, 1);
+}
+
+h2 {
+  margin: 0 0 2rem 0;
+  text-transform: lowercase;
+}
+
+h2,
+h3 {
+  color: $colorprimary;
+}
+
+header {
+  margin: 1rem 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  @extend %layoutdiv;
+
+  img {
+    width: 100px;
+    margin-right: 1rem;
+    border-radius: 50%;
+  }
+}
+
+.resume {
+  color: $colorblack;
+
+  max-width: 1140px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+
+  padding: 2rem;
+  margin: 0 auto;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    text-align: right;
+    margin: 0 2rem 0 0;
+  }
+
+  h3:after {
+    content: ":";
+  }
+
+  h4 {
+    color: $colorgray;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  ul {
+    margin: 0 0 1rem 0;
+    padding: 0 0 0 1rem;
+    line-height: 1.5;
+
+  }
+
+  &__skills {
+    font-size: 0.8rem;
+    column-width: 20vw;
+    margin-bottom: 1rem;
+
+    ul {
+      margin: 0 0 1rem 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li:before {
+      content: "⚫";
+      font-size: 90%;
+      display: inline-block;
+      margin-right: 1rem;
+      transform: translateY(-3px);
+    }
+
+  }
+
+  &__professional-accomplishments {
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+}
+
+.contact {
+  color: $colorwhite;
+  background: $colorblack;
+  text-align: center;
+  padding-top: 2rem;
+
+  label {
+    font-size: 0;
+    text-indent: -9999;
+    visibility: hidden;
+  }
+
+  section {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    padding-bottom: 1rem;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  paper-input {
+    text-align: left;
+    --primary-text-color: #6e6c69;
+  }
+
+  iron-icon {
+    color: #6e6c69;
+    margin-right: 1rem;
+    margin-bottom: 4px;
+  }
+
+  textarea {
+    color: #6e6c69;
+    line-height: 1.5;
+    width: 80%;
+    height: 100%;
+    max-height: 184px;
+    margin: 1rem 2rem;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid #6e6c69;
+    background: rgba(255, 255, 255, 0.05)
+  }
+
+  paper-button {
+    width: 33%;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    text-transform: unset;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    background: $colorsecondary;
+
+  }
+
+}
+
+footer h2 {
+  max-width: 1280px;
+  margin: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid $colorblack;
+}

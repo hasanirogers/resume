@@ -1,0 +1,15 @@
+{
+  "name": "hasanirogers",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "paper-input": "PolymerElements/paper-input#^2.0.3",
+    "iron-icon": "PolymerElements/iron-icon#^2.0.1",
+    "iron-icons": "PolymerElements/iron-icons#^2.0.1",
+    "paper-button": "PolymerElements/paper-button#^2.0.0"
+  }
+}

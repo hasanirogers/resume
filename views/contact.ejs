@@ -1,0 +1,29 @@
+<h2>Contact Me</h1>
+<form id="contact" class="contact" action="/email">
+  <section>
+    <div>
+      <p>
+        <paper-input label="Name">
+          <iron-icon icon="communication:contacts" slot="prefix"></iron-icon>
+        </paper-input>
+      </p>
+
+      <p>
+        <paper-input label="Phone">
+          <iron-icon icon="communication:phonelink-ring" slot="prefix"></iron-icon>
+        </paper-input>
+      </p>
+
+      <p>
+        <paper-input label="Email">
+          <iron-icon icon="communication:mail-outline" slot="prefix"></iron-icon>
+        </paper-input>
+      </p>
+    </div>
+    <div>
+      <label for="message"><p>Message</p></label>
+      <textarea id="message" placeholder="What's this about?"></textarea>
+    </div>
+  </section>
+  <paper-button class="pink">Reach out to me with your questions.</paper-button>
+</form>
