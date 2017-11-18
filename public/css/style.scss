@@ -212,7 +212,8 @@ header {
 
 .social-media {
   list-style: none;
-  display: inline-flex;
+  display: flex;
+  justify-content: space-around;
   margin: 0 0 1rem 0;
   padding: 0;
 
@@ -225,9 +226,8 @@ header {
   }
 
   [icon] {
-    --iron-icon-height: 96px;
-    --iron-icon-width: 96px;
-    margin-right: 2rem;
+    --iron-icon-height: 64px;
+    --iron-icon-width: 64px;
   }
 }
 
@@ -283,6 +283,16 @@ footer h2 {
     paper-button {
       width: 40%;
       margin: 1rem auto 2rem auto;
+    }
+  }
+
+  .social-media {
+    max-width: 60%;
+    margin: 0 auto;
+
+    [icon] {
+      --iron-icon-height: 96px;
+      --iron-icon-width: 96px;
     }
   }
 }
