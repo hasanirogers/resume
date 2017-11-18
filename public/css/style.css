@@ -191,7 +191,7 @@ footer h2 {
     margin: 1rem auto 2rem auto; }
   .social-media {
     max-width: 60%;
-    margin: 0 auto; }
+    margin: 0 auto 1rem auto; }
     .social-media [icon] {
       --iron-icon-height: 96px;
       --iron-icon-width: 96px; } }

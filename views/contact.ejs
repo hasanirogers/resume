@@ -1,5 +1,5 @@
 <h2>Contact Me</h1>
-<form id="contact" class="contact" action="/email">
+<form id="contact" class="contact" method="post" action="contact">
   <ul class="social-media">
     <li><a href="https://github.com/hasanirogers"><iron-icon icon="appicons:github"></iron-icon></a></li>
     <li><a href="https://codepen.io/hasanirogers"><iron-icon icon="appicons:codepen"></iron-icon></a></li>
@@ -9,26 +9,26 @@
   <section>
     <div>
       <p>
-        <paper-input label="Name">
+        <paper-input id="user" name="user" label="Your name">
           <iron-icon icon="communication:contacts" slot="prefix"></iron-icon>
         </paper-input>
       </p>
 
       <p>
-        <paper-input label="Phone">
+        <paper-input id="phone" name="phone" label="Your phone number">
           <iron-icon icon="communication:phonelink-ring" slot="prefix"></iron-icon>
         </paper-input>
       </p>
 
       <p>
-        <paper-input label="Email">
+        <paper-input id="email" name="email" label="Your email">
           <iron-icon icon="communication:mail-outline" slot="prefix"></iron-icon>
         </paper-input>
       </p>
     </div>
     <div>
       <label for="message"><p>Message</p></label>
-      <textarea id="message" placeholder="Message me maybe?"></textarea>
+      <textarea id="message" name="message" placeholder="Message me maybe?"></textarea>
     </div>
   </section>
   <paper-button>Send me your questions.</paper-button>
