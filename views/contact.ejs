@@ -9,26 +9,26 @@
   <section>
     <div>
       <p>
-        <paper-input id="user" name="user" label="Your name">
+        <paper-input id="user" name="user" label="Your name" allowed-pattern="[\ a-zA-z]" required>
           <iron-icon icon="communication:contacts" slot="prefix"></iron-icon>
         </paper-input>
       </p>
 
       <p>
-        <paper-input id="phone" name="phone" label="Your phone number">
+        <paper-input type="tel" id="phone" name="phone" label="Your phone number" allowed-pattern="[\-.0-9]" required>
           <iron-icon icon="communication:phonelink-ring" slot="prefix"></iron-icon>
         </paper-input>
       </p>
 
       <p>
-        <paper-input id="email" name="email" label="Your email">
+        <paper-input type="email" id="email" name="email" label="Your email" required>
           <iron-icon icon="communication:mail-outline" slot="prefix"></iron-icon>
         </paper-input>
       </p>
     </div>
     <div>
       <label for="message"><p>Message</p></label>
-      <textarea id="message" name="message" placeholder="Message me maybe?"></textarea>
+      <textarea id="message" name="message" placeholder="Message me maybe?" required></textarea>
     </div>
   </section>
   <paper-button>
