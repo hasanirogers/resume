@@ -3,14 +3,21 @@ var domain = window.location.href;
 
 submitBtn.addEventListener('click', function(event) {
   event.preventDefault();
+
   let request,
-      form,
-      formData,
-      testData;
+      formData = new String;
+      form = document.querySelector('form'),
+      submitBtn = document.querySelector('paper-button'),
+      submitBtnMsg = form.querySelector('span');
+      submitBtnMsgText = submitBtnMsg.innerText;
+
+  submitBtn.setAttribute('disabled', true);
 
   function makeRequest() {
     request = new XMLHttpRequest();
-    form = document.querySelector('form');
+
+    // add loading status for form
+    form.classList.add('loading');
 
     // build form string
     formData = 'user=' + document.getElementById('user').value;
@@ -35,12 +42,32 @@ submitBtn.addEventListener('click', function(event) {
   function handleResponse() {
     if (request.readyState === 4) {
       if (request.status === 200) {
-        // alert('yea');
+        formContactSuccess();
       } else {
-        console.log('oh boy');
+        formContactError();
       }
     }
   }
 
+  function formContactSuccess() {
+    form.classList.remove('contact--loading');
+    form.classList.add('contact--success');
+    submitBtnMsg.innerHTML = "Sweet. I got your message. I'll follow up soon."
+    // change button to green then fade it out
+  }
+
+  function formContactError(formElm) {
+    form.classList.remove('contact--loading');
+    form.classList.add('contact--error');
+    submitBtnMsg.innerHTML = "Oh boy. Something happen and I didn't your message.";
+
+    setTimeout(function() {
+      form.classList.remove('contact--error');
+      submitBtn.removeAttribute('disabled');
+      submitBtnMsg.innerHTML = submitBtnMsgText;
+    }, 3000);
+  }
+
+  // if validation passes
   makeRequest();
 });
