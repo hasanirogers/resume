@@ -11,7 +11,10 @@
     "test:integration": "mocha --recursive test/integration"
   },
   "dependencies": {
-    "@polymer/polymer": "^3.0.0-pre.1",
+    "@polymer/iron-icons": "^0.0.3",
+    "@polymer/paper-button": "^0.0.3",
+    "@polymer/paper-input": "^0.0.3",
+    "@polymer/polymer": "^2.2.0",
     "@sendgrid/mail": "^6.1.4",
     "@webcomponents/webcomponentsjs": "^1.0.18",
     "body-parser": "^1.13.3",

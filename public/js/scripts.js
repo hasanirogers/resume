@@ -1,16 +1,24 @@
+var isValid;
+
 function validateForm() {
-  let fields = document.querySelectorAll('[required]');
+  let fields = document.querySelectorAll('[required]'),
+      submitBtn = document.querySelector('paper-button');
+
+  submitBtn.setAttribute('disabled', 'disabled');
 
   // convert the fields nodeList to an array and iterate over each
   Array.from(fields).forEach((element, index) => {
     element.addEventListener('blur', function() {
-      //console.log(this.value);
-      isValid = validateElement(element);
+      // console.log(this.value);
     });
+    isValid = validateElement(element);
   });
+
+  return isValid;
 }
 
 function validateElement(elm) {
+  return true;
   if(typeof elm.value != 'undefined') {
     if (elm.value.length > 2) {
       return true;
@@ -26,15 +34,14 @@ function handleContact() {
   event.preventDefault();
 
   let request,
-    formData = new String;
-  form = document.querySelector('form'),
-    submitBtn = document.querySelector('paper-button'),
-    submitBtnMsg = form.querySelector('span');
-  submitBtnMsgText = submitBtnMsg.innerText;
-
-  submitBtn.setAttribute('disabled', true);
+      formData = new String;
+      form = document.querySelector('form'),
+      submitBtn = document.querySelector('paper-button'),
+      submitBtnMsg = form.querySelector('span');
+      submitBtnMsgText = submitBtnMsg.innerText;
 
   function makeRequest() {
+    let domain = window.location.href;
     request = new XMLHttpRequest();
 
     // add loading status for form
@@ -89,15 +96,12 @@ function handleContact() {
     }, 3000);
   }
 
+  validateForm();
+  console.log('is form valid: ' + isValid);
   if (isValid) makeRequest();
 }
 
 
 window.onload = function() {
-  let domain = window.location.href,
-    isValid = false,
-    submitBtn = document.getElementsByTagName('paper-button')[0];
-
-  validateForm();
-  submitBtn.addEventListener('click', handleContact);
+  document.querySelector('paper-button').addEventListener('click', handleContact);
 }
