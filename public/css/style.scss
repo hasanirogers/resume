@@ -16,6 +16,7 @@ $infoerror: red;
 }
 
 html {
+  overflow-x: hidden;
   border-top: 10px solid $colorblack;
 }
 
@@ -148,7 +149,7 @@ header {
     padding-bottom: 1rem;
   }
 
-  section> :first-child {
+  section > :first-child {
     margin-left: 2rem;
   }
 
@@ -172,7 +173,7 @@ header {
   textarea {
     color: #6e6c69;
     line-height: 1.5;
-    width: 80%;
+    width: 70%;
     height: 100%;
     height: 184px;
     margin: 1rem 2rem;
@@ -201,6 +202,16 @@ header {
   img {
     width: 48px;
     display: none;
+  }
+
+  &__validation-message {
+    font-weight: bold;
+    color: $infoerror;
+    visibility: hidden;
+
+    &--show {
+      visibility: visible;
+    }
   }
 
   &--loading {
@@ -285,22 +296,18 @@ footer h2 {
       display: grid;
       grid-template-columns: 1fr 2fr;
     }
+
+    textarea {
+      width: 80%;
+    }
+
     paper-input {
       width: 100%;
     }
+
     paper-button {
       width: 40%;
       margin: 1rem auto 2rem auto;
-    }
-
-    &__validation-message {
-      font-weight: bold;
-      color: $infoerror;
-      visibility: hidden;
-
-      &--show {
-        visibility: visible;
-      }
     }
   }
   .social-media {
