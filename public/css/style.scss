@@ -292,6 +292,16 @@ footer h2 {
       width: 40%;
       margin: 1rem auto 2rem auto;
     }
+
+    &__validation-message {
+      font-weight: bold;
+      color: $infoerror;
+      visibility: hidden;
+
+      &--show {
+        visibility: visible;
+      }
+    }
   }
   .social-media {
     max-width: $breakpoint;

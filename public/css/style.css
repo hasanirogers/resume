@@ -205,6 +205,12 @@ footer h2 {
   .contact paper-button {
     width: 40%;
     margin: 1rem auto 2rem auto; }
+  .contact__validation-message {
+    font-weight: bold;
+    color: red;
+    visibility: hidden; }
+    .contact__validation-message--show {
+      visibility: visible; }
   .social-media {
     max-width: 640px;
     margin: 0 auto 1rem auto; }

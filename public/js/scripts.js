@@ -2,6 +2,7 @@ var isValid;
 
 function validateForm() {
   let fields = document.querySelectorAll('[required]'),
+      message = document.querySelector('.contact__validation-message'),
       submitBtn = document.querySelector('paper-button');
 
   submitBtn.setAttribute('disabled', 'disabled');
@@ -9,23 +10,27 @@ function validateForm() {
   // convert the fields nodeList to an array and iterate over each
   Array.from(fields).forEach((element, index) => {
     element.addEventListener('blur', function() {
-      // console.log(this.value);
+      validateForm();
     });
     isValid = validateElement(element);
   });
+
+  if (!isValid) {
+    message.classList.add('contact__validation-message--show');
+  } else {
+    message.classList.remove('contact__validation-message--show');
+    document.querySelector('paper-button').removeAttribute('disabled');
+  }
 
   return isValid;
 }
 
 function validateElement(elm) {
-  return true;
   if(typeof elm.value != 'undefined') {
     if (elm.value.length > 2) {
       return true;
     }
   } else {
-    console.log(elm);
-    elm.classList.add('wuuuut');
     return false;
   }
 }
@@ -87,7 +92,7 @@ function handleContact() {
   function formContactError(formElm) {
     form.classList.remove('contact--loading');
     form.classList.add('contact--error');
-    submitBtnMsg.innerHTML = "Oh boy. Something happen and I didn't your message.";
+    submitBtnMsg.innerHTML = "Oh boy. Something happened and I didn't your message.";
 
     setTimeout(function () {
       form.classList.remove('contact--error');
