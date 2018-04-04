@@ -21,8 +21,7 @@ router.post('/contact', (request, response) => {
   // node requires text/plain
   response.setHeader('Content-Type', 'text/plain');
 
-  //sendGrid.setApiKey(process.env.SENDGRID_API_KEY);
-  sendGrid.setApiKey('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');
+  sendGrid.setApiKey(process.env.SENDGRID_API_KEY);
   sendGrid.send(message);
 
   // make sure you respond with a status and end the connection
