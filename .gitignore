@@ -4,3 +4,4 @@ public/components
 .sass-cache
 .env
 launch.json
+package-lock.json
