@@ -71,7 +71,8 @@ const commonConfig = merge([
               options: {sourceMap: true}
             },
             {
-              loader: "postcss-loader"
+              loader: "postcss-loader",
+              options: {sourceMap: true}
             },
             {
               loader: "sass-loader",
