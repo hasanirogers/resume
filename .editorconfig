@@ -1,10 +1,32 @@
-# http://editorconfig.org
+# you must install the appropriate package/plugin for your editor: http://editorconfig.org/#download
+
+# top-most config file
 root = true
 
+# defaults
 [*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.txt]
+insert_final_newline = false
+trim-trailing_whitespace = false
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.java]
+indent_style = tab
+indent_size = 4
+
+[*{.jsp,.html,.ejs,.swig,.json,.xml,.yml,.svg,.js}]
 indent_style = space
 indent_size = 2
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
+
+[*{.css,.scss}]
+indent_style = space
+indent_size = 4

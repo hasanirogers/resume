@@ -1,0 +1,26 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "indentation": 4,
+    "order/order": null,
+    "order/properties-alphabetical-order": null,
+    "shorthand-property-no-redundant-values": null,
+    "max-nesting-depth": 2,
+    "declaration-empty-line-before": [
+      "always",
+      {
+        "except": [
+            "first-nested"
+        ],
+        "ignore": [
+            "after-declaration",
+            "after-comment"
+        ]
+      }
+    ]
+  },
+  "ignoreFiles": [
+      "**/*.js",
+      "**/*.json"
+  ]
+}

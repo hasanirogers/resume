@@ -1,0 +1,98 @@
+$colorwhite: rgb(238, 238, 238);
+$colorblack: #101010;
+$colorgray: #404040;
+$colorprimary: #d06f00;
+$colorsecondary: #0069cc;
+
+$infosuccess: rgb(0, 126, 0);
+$infoerror: rgb(126, 0, 0);
+
+$pagewidth: 1280px;
+$breakpoint: 767px;
+
+%layoutdiv {
+    max-width: 1280px;
+    border-bottom: 4px solid $colorblack;
+}
+
+html {
+    --color-white: rgb(238, 238, 238);
+    --color-black: #101010;
+    --color-gray: #404040;
+    --color-primary: #d06f00;
+    --color-secondary: #0069cc;
+
+    --color-success: rgb(0, 126, 0);
+    --color-error: rgb(126, 0, 0);
+
+    overflow-x: hidden;
+    border-top: 10px solid $colorblack;
+}
+
+html::after {
+    content: ' ';
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font: 14px 'Ubuntu', sans-serif;
+    color: $colorblack;
+    margin: 0;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-image: url('/img/tree.png');
+}
+
+a {
+    color: $colorsecondary;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 1px 1px 0 rgba(150, 150, 150, 1);
+}
+
+h2 {
+    margin: 0 0 1rem 0;
+    text-transform: lowercase;
+}
+
+h2,
+h3 {
+    color: $colorprimary;
+}
+
+footer h2 {
+    max-width: $pagewidth;
+    margin: 2rem;
+    padding-top: 2rem;
+    border-top: 4px solid $colorblack;
+}
+
+@media (min-width: $pagewidth) {
+    footer h2 {
+        margin: 2rem auto;
+    }
+}
+
+
+@media (min-width: $breakpoint) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+        text-align: right;
+        padding: 0;
+    }
+}

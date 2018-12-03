@@ -1,5 +1,6 @@
 node_modules/
-public/components
+public/app
+public/vendor
 .nyc_output
 .sass-cache
 .env
