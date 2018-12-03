@@ -71,13 +71,13 @@ class MeSocial extends LitElement {
           fill: var(--color-white);
         }
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 768px) {
           :host([header]) {
             display: none;
           }
         }
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 769px) {
           :host([main]) {
             display: none;
           }

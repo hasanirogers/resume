@@ -25,9 +25,9 @@ const polyfills = [
   }
 ];
 
-const STYLELINT = {
+const stylelint = {
   context: './src',
-  failOnError: false
+  failOnError: true
 }
 
 const commonConfig = merge([
@@ -90,7 +90,7 @@ const developmentConfig = merge([
     devtool: 'cheap-module-source-map',
     plugins: [
       new CopyWebpackPlugin(polyfills),
-      new StyleLintPlugin(STYLELINT),
+      new StyleLintPlugin(stylelint),
       new MiniCssExtractPlugin({filename: "app.css"})
     ]
   }

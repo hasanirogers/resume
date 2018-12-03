@@ -126,7 +126,7 @@ class MeContact extends LitElement {
           opacity: 1;
         }
 
-        @media (min-width: 767px) {
+        @media (min-width: 769px) {
           section {
             display: grid;
             grid-template-columns: 1fr 2fr;
