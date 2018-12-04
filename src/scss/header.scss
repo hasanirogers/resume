@@ -4,7 +4,7 @@
     > div {
         @extend %layoutdiv;
 
-        margin: 1rem 2rem;
+        margin: 1rem auto;
         display: grid;
         grid-template-columns: auto 1fr auto;
 
@@ -64,7 +64,7 @@
         }
 
         &--fixed > div {
-            margin: 0;
+            margin: 0 auto;
             padding: 0 1rem;
         }
 
