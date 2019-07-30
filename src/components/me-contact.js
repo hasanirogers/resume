@@ -78,7 +78,7 @@ class MeContact extends LitElement {
             margin-bottom: 2rem;
             position: relative;
             border-radius: 4px;
-            background: var(--color-secondary);
+            background: var(--color-primary);
             transition: all 300ms ease;
         }
 

@@ -1,5 +1,5 @@
 import { LitElement, html } from '@polymer/lit-element';
-import { iconGithub, iconCodepen, iconNpm, iconLinkedIn } from '../scripts/icons';
+import { iconGithub, iconCodepen, iconNpm, iconLinkedIn, iconStackBlitz } from '../scripts/icons';
 
 class MeSocial extends LitElement {
   static get properties() {
@@ -42,11 +42,12 @@ class MeSocial extends LitElement {
         svg {
           width: 48px;
           height: 48px;
+          fill: var(--color-white);
           transition: all ease 200ms;
         }
 
         svg:hover {
-          fill: var(--colors-econdary);
+          fill: var(--color-secondary);
           /* stroke: var(--color-white);
           stroke-width: 2px; */
         }
@@ -68,7 +69,6 @@ class MeSocial extends LitElement {
 
         :host([fixed]) svg {
           width: 56px;
-          fill: var(--color-white);
         }
 
         @media screen and (max-width: 768px) {
@@ -85,10 +85,10 @@ class MeSocial extends LitElement {
       </style>
       <ul class="social-media">
         <li><a href="https://github.com/hasanirogers">${iconGithub}</a></li>
-        <li><a href="https://codepen.io/hasanirogers">${iconCodepen}</a>
-        </li>
+        <li><a href="https://codepen.io/hasanirogers">${iconCodepen}</a></li>
         <li><a href="https://www.npmjs.com/~hasanirogers">${iconNpm}</a></li>
         <li><a href="https://www.linkedin.com/in/hasani-rogers-85523829">${iconLinkedIn}</a></li>
+        <li><a href="https://stackblitz.com/@hasanirogers">${iconStackBlitz}</a></li>
         <li><a href="https://twitter.com/hasanirogers"></a></li>
       </ul>
     `

@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "nodemon bin/www",
-    "dev": "webpack --watch && nodemon bin/www localhost 3000",
     "prod": "webpack && forever start bin/www",
     "build": "webpack",
     "build:watch": "webpack --watch"
